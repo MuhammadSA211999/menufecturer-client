@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Blogs = () => {
+    // quetions answeared page 
     return (
         <div className='bg-base-200 p-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             <div className="lg:max-w-lg bg-base-100 shadow-xl">
