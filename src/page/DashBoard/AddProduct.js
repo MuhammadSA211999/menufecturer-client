@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
 const AddProduct = () => {
+    // hook fofrm
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const imgStorageKey = 'e2d45fddfbfdb6662a3ef75d64ca3f0b';
 
@@ -59,7 +60,7 @@ const AddProduct = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {/* PRODUCT NAME FIELD */}
                     <div className="form-control w-full max-w-xs">
-                       
+
                         <input
                             type="name"
                             placeholder="Product Name"
