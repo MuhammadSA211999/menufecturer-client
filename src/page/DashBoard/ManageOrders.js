@@ -4,6 +4,7 @@ import Loading from '../Shared/Loading';
 import AllOrders from './AllOrders';
 
 const ManageOrders = () => {
+    // react query use
     const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch('https://salty-tor-00917.herokuapp.com/allorders', {
         method: 'GET',
         headers: {
