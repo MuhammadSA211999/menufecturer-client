@@ -1,8 +1,8 @@
 # ASSIGNMENT 12
 
-### CLIENT CODE [GitHub Link](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-MuhammadSA211999).
+### CLIENT [CODE](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-MuhammadSA211999).
 
-### SERVER CODE [GitHub Link](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MuhammadSA211999).
+### SERVER [CODE](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MuhammadSA211999).
 
 ### WEB [Click Here](https://manufacturer-36735.firebaseapp.com).
 
