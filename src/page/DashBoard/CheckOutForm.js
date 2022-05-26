@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 
 const CheckOutForm = ({ parts }) => {
+    // payment 
     const stripe = useStripe();
     const elements = useElements();
     const [processing, setProcessing] = useState(false)
