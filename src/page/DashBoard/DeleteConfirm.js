@@ -2,6 +2,7 @@ import React from 'react';
 import toast from 'react-hot-toast';
 
 const DeleteConfirm = ({ cancel, setCancel, refetch }) => {
+    // crud delete
     console.log(cancel)
     const { productName, _id, email } = cancel;
 
