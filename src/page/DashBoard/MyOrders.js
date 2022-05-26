@@ -7,6 +7,7 @@ import DeleteConfirm from './DeleteConfirm';
 import OrderRow from './OrderRow';
 
 const MyOrders = () => {
+    // auth orders loading 
     const [cancel, setCancel] = useState(null)
     const [user] = useAuthState(auth);
 
