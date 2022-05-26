@@ -8,6 +8,7 @@ const AddProduct = () => {
     const imgStorageKey = 'e2d45fddfbfdb6662a3ef75d64ca3f0b';
 
     const onSubmit = async data => {
+        // image bb storage
         console.log('data', data);
         const image = data.image[0];
         const formData = new FormData();
