@@ -31,11 +31,11 @@ const MyReview = () => {
             customerFeedback: feedback
         }
 
-        fetch(`http://localhost:5000/review/${id}`, {
+        fetch(`https://salty-tor-00917.herokuapp.com/review/${id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                'authorization': `Bearer ${localStorage.getItem('authToken')}`
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(customerFeedback)
         })

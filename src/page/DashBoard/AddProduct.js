@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const imgStorageKey = '5bc77v5dfbfdb6662a3ef75d64ca3tr45';
+    const imgStorageKey = 'e2d45fddfbfdb6662a3ef75d64ca3f0b';
 
     const onSubmit = async data => {
         console.log('data', data);
@@ -29,22 +29,23 @@ const AddProduct = () => {
                         minimum: data.minimum,
                         image: image
                     }
-                    fetch('http://localhost:5000/addproduct', {
+                    // send to your database 
+                    fetch('https://salty-tor-00917.herokuapp.com/addproduct', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
-                            authorization: `Bearer ${localStorage.getItem('authToken')}`
+                            authorization: `Bearer ${localStorage.getItem('accessToken')}`
                         },
                         body: JSON.stringify(product)
                     })
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
-                                toast.success('product added successfully');
+                                toast.success('Product added successfully');
                                 reset();
                             }
                             else {
-                                toast.error('failed to add a product,try again!')
+                                toast.error('Failed to add a product')
                             }
                         })
                 }
@@ -56,8 +57,9 @@ const AddProduct = () => {
 
             <div className='flex justify-center'>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    {/* PRODUCT NAME FIELD */}
                     <div className="form-control w-full max-w-xs">
-
+                       
                         <input
                             type="name"
                             placeholder="Product Name"
@@ -75,7 +77,7 @@ const AddProduct = () => {
                         </label>
                     </div>
 
-
+                    {/* EMAIL FIELD */}
                     <div className="form-control w-full max-w-xs">
                         <input
                             type="number"
@@ -93,7 +95,7 @@ const AddProduct = () => {
                         </label>
                     </div>
 
-
+                    {/*AVAILABLE QUANTITY FIELD */}
                     <div className="form-control w-full max-w-xs">
                         <input
                             type="number"
@@ -111,6 +113,7 @@ const AddProduct = () => {
                         </label>
                     </div>
 
+                    {/*MINIMUM ORDER FIELD */}
                     <div className="form-control w-full max-w-xs">
                         <input
                             type="number"
@@ -128,7 +131,7 @@ const AddProduct = () => {
                         </label>
                     </div>
 
-
+                    {/*PRODUCT DESCRIPTION FIELD */}
                     <div className="form-control w-full max-w-xs">
                         <textarea
                             type="text"
@@ -146,7 +149,7 @@ const AddProduct = () => {
                         </label>
                     </div>
 
-
+                    {/* IMAGE UPLOAD FIELD */}
                     <div className="form-control w-full max-w-xs">
                         <input
                             type="file"

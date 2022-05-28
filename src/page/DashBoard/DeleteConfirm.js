@@ -6,11 +6,11 @@ const DeleteConfirm = ({ cancel, setCancel, refetch }) => {
     const { productName, _id, email } = cancel;
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/orders/${_id}`, {
+        fetch(`https://salty-tor-00917.herokuapp.com/orders/${_id}`, {
 
             method: 'DELETE',
             headers: {
-                'authorization': `Bearer ${localStorage.getItem('authToken')}`
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
             .then(res => res.json())
@@ -31,7 +31,7 @@ const DeleteConfirm = ({ cancel, setCancel, refetch }) => {
                     <h3 className="font-bold text-lg">Are You sure you want to cancel <span className='text-green-700'>{productName}</span>!</h3>
                     <p className="py-4">This Product can not be restore!</p>
                     <div className="modal-action">
-                        <button onClick={() => handleDelete(email)} className='btn btn-md btn-error text-white'>Cancel Product</button>
+                        <button onClick={() => handleDelete(email)} className='btn btn-md btn-error text-white'>Cancel Order</button>
                         <label htmlFor="delete-confirm" className="btn btn-md">Close</label>
                     </div>
                 </div>

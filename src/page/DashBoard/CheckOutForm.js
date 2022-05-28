@@ -13,11 +13,11 @@ const CheckOutForm = ({ parts }) => {
     const { _id, price, email } = parts;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://salty-tor-00917.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                'authorization': `Bearer ${localStorage.getItem('authToken')}`
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify({ price })
         })
@@ -82,11 +82,11 @@ const CheckOutForm = ({ parts }) => {
                 transactionId: paymentIntent.id
 
             }
-            fetch(`http://localhost:5000/product/${_id}`, {
+            fetch(`https://salty-tor-00917.herokuapp.com/product/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
-                    'authorization': `Bearer ${localStorage.getItem('authToken')}`
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 },
                 body: JSON.stringify(payment)
             }).then(res => res.json())

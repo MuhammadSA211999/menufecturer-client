@@ -53,7 +53,7 @@ const Login = () => {
                 <div className="card-body">
                     <h2 className="text-center font-bold text-2xl uppercase">Login</h2>
 
-
+                    {/* EMAIL FIELD */}
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
@@ -81,6 +81,7 @@ const Login = () => {
                             </label>
                         </div>
 
+                        {/* PASSWORD FIELD */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Password</span>

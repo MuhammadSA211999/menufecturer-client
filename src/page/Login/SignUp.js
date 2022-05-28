@@ -46,7 +46,7 @@ const SignUp = () => {
                     <h2 className="text-center font-bold text-2xl">Sign Up</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-
+                        {/* NAME FIELD */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -68,7 +68,7 @@ const SignUp = () => {
                             </label>
                         </div>
 
-
+                        {/* EMAIL FIELD */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -94,7 +94,7 @@ const SignUp = () => {
                             </label>
                         </div>
 
-
+                        {/* PASSWORD FIELD */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Password</span>
