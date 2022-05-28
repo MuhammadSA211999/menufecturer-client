@@ -1,12 +1,12 @@
-# Manufacturer website
+# ASSIGNMENT 12
 
-### Private Repository Client Side Code [GitHub Link](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-MuhammadSA211999).
+### CLIENT CODE [GitHub Link](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-MuhammadSA211999).
 
-### Private Repository Server Side Code [GitHub Link](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MuhammadSA211999).
+### SERVER CODE [GitHub Link](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MuhammadSA211999).
 
 ### WEB [Click Here](https://manufacturer-36735.firebaseapp.com).
 
-## Project Details
+## ABOUT PROJECT
 * This is Manufacturer company website.
 * In this website already have an admin. admin can manage product items,users & orders.
 * Admin also can add a item and delete a item.
